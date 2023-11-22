@@ -20,9 +20,8 @@ env_path = BASE_DIR / '.env'
 
 with open(env_path, 'r') as file:
     for line in file.read().splitlines():
-        if not line.startswith('#') and len(line) > 0:
-            key, value = line.strip().split('=', 1)
-            os.environ[key] = value.strip("'")
+        key, value = line.strip().split('=', 1)
+        os.environ[key] = value.strip("'")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -63,7 +62,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,7 +126,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     BASE_DIR / 'static',

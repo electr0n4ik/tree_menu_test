@@ -25,10 +25,6 @@ named url;
 
 ``` Shell
 SECRET_KEY=
-
-PORT=80
-
-# PostgreSQL
 POSTGRES_USER=
 POSTGRES_PASSWORD=
 ``
